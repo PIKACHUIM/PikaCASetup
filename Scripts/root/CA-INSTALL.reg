@@ -2,7 +2,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot]
 "DisableRootAutoUpdate"=dword:00000001
-"RootDirUrl"="https://pikachuim.gitee.io/ca/CA-INSTALL.sst"
+"RootDirUrl"="https://pikachuim.github.io/testca/microsofts.sst"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\ProtectedRoots]
 "Flags"=dword:00000000
