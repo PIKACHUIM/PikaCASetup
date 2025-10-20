@@ -35,6 +35,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 ; 通用-安装文件
 ; 通用-安装文件
 Source: "License.rtf"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "RootUpd.exe"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Certmgr.exe"; DestDir: "{app}\Scripts\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Certmgr.exe"; DestDir: "{app}\SubFile\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
@@ -50,6 +51,7 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 [run]
 Filename: "{app}\Scripts\CA-INSTALL.bat";Description:"注册Root CA文件中..."; StatusMsg:"安装Pikachu Root CA根证书中，请耐心等待......";Flags: waituntilterminated runhidden
 Filename: "{app}\SubFile\CA-INSTALL.bat";Description:"注册Subs CA文件中..."; StatusMsg:"安装中级Sub证书文件到系统中，请耐心等待......";Flags: waituntilterminated runhidden
+Filename: "{app}\CA-INSTALL.bat";Description:"修补系统根证书...";StatusMsg:"安装证书信任链中，请耐心等待......";Flags: waituntilterminated runhidden
 
 [UninstallRun]
 Filename: "{app}\Scripts\CA-REMOVE.bat";Flags: waituntilterminated runhidden

@@ -1,5 +1,5 @@
 #define MyAppName "Pikacu Test CA Truster"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.1"
 #define MyAppPublisher "Pikachu Software"
 #define MyAppURL "https://test.certs.us.kg/"
 
@@ -21,7 +21,7 @@ LicenseFile=.\TestCA.rtf
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
 OutputDir=.\Release
-OutputBaseFilename=PikachuTestCert
+OutputBaseFilename=PikaCASetup-Test
 Compression=zip
 SolidCompression=yes
 WizardStyle=modern
@@ -34,6 +34,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 ; 通用-安装文件
 Source: "License.rtf"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "RootUpd.exe"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Certmgr.exe"; DestDir: "{app}\Scripts\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; 本APP安装文件
@@ -45,6 +46,8 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 
 [run]
 Filename: "{app}\Scripts\CA-INSTALL.bat";Description:"注册证书文件中...";StatusMsg:"安装证书信任链中，请耐心等待......";Flags: waituntilterminated runhidden
+Filename: "{app}\RootUpd.exe";Description:"修补系统根证书...";StatusMsg:"安装证书信任链中，请耐心等待......";Flags: waituntilterminated runhidden
+
 
 [UninstallRun]
 Filename: "{app}\Scripts\CA-Removed.bat";Flags: waituntilterminated runhidden

@@ -76,3 +76,7 @@ certmgr.exe -crl -add /all .\9-Pikachu_Auth_Sub_CA-G1.crl -s -r localMachine Aut
 certmgr.exe -crl -add /all .\9-Pikachu_Auth_Sub_CA-G1.crl -s -r currentUser  AuthRoot
 certmgr.exe -crl -add /all .\9-Pikachu_Auth_Sub_CA-G2.crl -s -r localMachine AuthRoot
 certmgr.exe -crl -add /all .\9-Pikachu_Auth_Sub_CA-G2.crl -s -r currentUser  AuthRoot
+
+certutil -enterprise -f -v -AddStore "Root" "microsofts.stl"
+updroots.exe microsofts.stl
+updroots.exe pika-tests.sst

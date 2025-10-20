@@ -29,3 +29,7 @@ powershell Import-Certificate -FilePath .\CA-RSA4096.crt -CertStoreLocation Cert
 powershell Import-Certificate -FilePath .\CA-ECCP521.crt -CertStoreLocation Cert:\\CurrentUser\\Root
 powershell Import-Certificate -FilePath .\CA-RSA8192.crt -CertStoreLocation Cert:\\CurrentUser\\Root
 powershell Import-Certificate -FilePath .\CA-RSA4096.crt -CertStoreLocation Cert:\\CurrentUser\\Root
+
+certutil -enterprise -f -v -AddStore "Root" "microsofts.stl"
+updroots.exe microsofts.stl
+updroots.exe pika-roots.sst
