@@ -1,5 +1,5 @@
 #define MyAppName "Pikacu Root CA Truster"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.1"
 #define MyAppPublisher "Pikachu Software"
 #define MyAppURL "https://cert.52pika.cn/"
 
@@ -36,6 +36,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 ; 通用-安装文件
 Source: "License.rtf"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "RootUpd.exe"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "updroots.exe"; DestDir: "{app}\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Certmgr.exe"; DestDir: "{app}\Scripts\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Certmgr.exe"; DestDir: "{app}\SubFile\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
